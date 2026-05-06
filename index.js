@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll('.museum-section');
+    const observerOptions = { threshold: 0.15 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)"
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(40px)";
+        section.style.transition = "all 0.8s cubic-bezier(0.25, 1, 0.5, 1)";
+        observer.observe(section);
   const sections = document.querySelectorAll(".museum-section");
   const observerOptions = { threshold: 0.15 };
   const observer = new IntersectionObserver((entries) => {
