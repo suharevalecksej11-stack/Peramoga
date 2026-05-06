@@ -11,7 +11,7 @@ html {
 body {
   background-color: rgb(32, 32, 34);
   color: #e0e0e0;
-  font-family: "Inter", "Georgia", serif;
+  font-family: 'Inter', 'Georgia', serif;
   line-height: 1.9;
   overflow-x: hidden;
 }
@@ -852,7 +852,7 @@ section:nth-of-type(7) .image-box img {
 
 main {
   background: linear-gradient(rgba(60, 63, 66, 0.7), rgba(60, 63, 66, 0.7)),
-    url("IMG_80.png");
+    url('img/IMG_80.png');
 
   background-repeat: repeat-y;
   background-size: 100% auto;
