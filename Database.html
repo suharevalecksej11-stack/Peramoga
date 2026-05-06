@@ -1,261 +1,359 @@
 html
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>База данных — Музей 1-й Витебской бригады</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <div class="container navbar">
-            <div class="logo">ПАМЯТЬ ВИТЕБЩИНЫ</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="Database.html" class="active">База Данных</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </div>
+      <div class="container navbar">
+        <div class="logo">ПАМЯТЬ ВИТЕБЩИНЫ</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="Database.html" class="active">База Данных</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
     </header>
 
     <main>
-        <section class="museum-section">
-            <div class="container">
-                <div class="tragedy-header">
-                    <h2 class="red-text">Электронный архив</h2>
-                    <span class="date-badge">Люди-герои</span>
-                </div>
-                <div class="search-container" style="margin-bottom: 50px; display: flex; gap: 10px;">
-                    <input type="text" id="dbSearch" placeholder="Введите фамилию для поиска в архиве..." 
-                           style="flex: 1; padding: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(161, 30, 30, 0.3); color: #fff; font-size: 1.2rem; outline: none; height: 64px;">
-                    <button id="searchBtn">Поиск</button>
-                </div>
-                <div class="database-grid two-columns">
-                    <div class="name-card db-item"><span>Акинин Семен Макарович</span></div>
-                    <div class="name-card db-item"><span>Акинин Степан Макарович</span></div>
-                    <div class="name-card db-item"><span>Алексеев Петр Андреевич</span></div>
-                    <div class="name-card db-item"><span>Балашов Василий Николаевич</span></div>
-                    <div class="name-card db-item"><span>Бобров Алексей Тимофеевич</span></div>
-                    <div class="name-card db-item"><span>Бобров Матвей Ефимович</span></div>
-                    <div class="name-card db-item"><span>Бобров Михаил Тимофеевич</span></div>
-                    <div class="name-card db-item"><span>Бобров Филипп Федорович</span></div>
-                    <div class="name-card db-item"><span>Богданов Алексей Максимович</span></div>
-                    <div class="name-card db-item"><span>Вокаин Эдуард Владимирович</span></div>
-                    <div class="name-card db-item"><span>Гончаров Александр Иосифович</span></div>
-                    <div class="name-card db-item"><span>Добжинецкий Бронислав Иосифович</span></div>
-                    <div class="name-card db-item"><span>Дойкин Леонид Романович</span></div>
-                    <div class="name-card db-item"><span>Ефременко Владимир Маркович</span></div>
-                    <div class="name-card db-item"><span>Захаренко Григорий Иванович</span></div>
-                    <div class="name-card db-item"><span>Игнатенко Серафим Гаврилович</span></div>
-                    <div class="name-card db-item"><span>Комаров Владимир Леонтьевич</span></div>
-                    <div class="name-card db-item"><span>Красков Василий Сергеевич</span></div>
-                    <div class="name-card db-item"><span>Кузьминов Иван Яковлевич</span></div>
-                    <div class="name-card db-item"><span>Кузьминова Мария Филипповна</span></div>
-                    <div class="name-card db-item"><span>Моисеенко Трофим Данилович</span></div>
-                    <div class="name-card db-item"><span>Москалева Людмила Марковна</span></div>
-                    <div class="name-card db-item"><span>Никифоров Владимир Тимофеевич</span></div>
-                    <div class="name-card db-item"><span>Орлов Николай Иванович</span></div>
-                    <div class="name-card db-item"><span>Пискунов Алексей Васильевич</span></div>
-                    <div class="name-card db-item"><span>Прусаков Павел Леонтьевич</span></div>
-                    <div class="name-card db-item"><span>Самухин Николай Яковлевич</span></div>
-                    <div class="name-card db-item"><span>Соловьев Игнат Петрович</span></div>
-                    <div class="name-card db-item"><span>Титов Николай Петрович</span></div>
-                    <div class="name-card db-item"><span>Трутнев Яков Васильевич</span></div>
-                    <div class="name-card db-item"><span>Федореноков Иван Федорович</span></div>
-                    <div class="name-card db-item"><span>Цыбульский Иван Иванович</span></div>
-                    <div class="name-card db-item"><span>Шилкин Виктор Иванович</span></div>
-                </div>
+      <section class="museum-section">
+        <div class="container">
+          <div class="tragedy-header">
+            <h2 class="red-text">Электронный архив</h2>
+            <span class="date-badge">Люди-герои</span>
+          </div>
+          <div
+            class="search-container"
+            style="margin-bottom: 50px; display: flex; gap: 10px"
+          >
+            <input
+              type="text"
+              id="dbSearch"
+              placeholder="Введите фамилию для поиска в архиве..."
+              style="
+                flex: 1;
+                padding: 20px;
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(161, 30, 30, 0.3);
+                color: #fff;
+                font-size: 1.2rem;
+                outline: none;
+                height: 64px;
+              "
+            />
+            <button id="searchBtn">Поиск</button>
+          </div>
+          <div class="database-grid two-columns">
+            <div class="name-card db-item">
+              <span>Акинин Семен Макарович</span>
             </div>
-        </section>
+            <div class="name-card db-item">
+              <span>Акинин Степан Макарович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Алексеев Петр Андреевич</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Балашов Василий Николаевич</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Бобров Алексей Тимофеевич</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Бобров Матвей Ефимович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Бобров Михаил Тимофеевич</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Бобров Филипп Федорович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Богданов Алексей Максимович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Вокаин Эдуард Владимирович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Гончаров Александр Иосифович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Добжинецкий Бронислав Иосифович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Дойкин Леонид Романович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Ефременко Владимир Маркович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Захаренко Григорий Иванович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Игнатенко Серафим Гаврилович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Комаров Владимир Леонтьевич</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Красков Василий Сергеевич</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Кузьминов Иван Яковлевич</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Кузьминова Мария Филипповна</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Моисеенко Трофим Данилович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Москалева Людмила Марковна</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Никифоров Владимир Тимофеевич</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Орлов Николай Иванович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Пискунов Алексей Васильевич</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Прусаков Павел Леонтьевич</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Самухин Николай Яковлевич</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Соловьев Игнат Петрович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Титов Николай Петрович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Трутнев Яков Васильевич</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Федореноков Иван Федорович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Цыбульский Иван Иванович</span>
+            </div>
+            <div class="name-card db-item">
+              <span>Шилкин Виктор Иванович</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <div id="heroOverlay" class="hero-overlay" style="display: none;">
-        <div class="hero-card-popup">
-            <div class="popup-image">
-                <img src="" alt="Герой">
-            </div>
-                <div class="popup-text">
-            <h2 id="popupName">Имя Героя</h2> 
-            <div class="accent-line-top">Досье</div>
-            
-            <div class="popup-bio">
-                <p id="popupBio">Заглушка текста...</p> 
-            </div>
-        <div class="popup-meta">
-            <strong>Статус:</strong> Личный состав
+    <div id="heroOverlay" class="hero-overlay" style="display: none">
+      <div class="hero-card-popup">
+        <div class="popup-image">
+          <img src="" alt="Герой" />
         </div>
-    </div>
+        <div class="popup-text">
+          <h2 id="popupName">Имя Героя</h2>
+          <div class="accent-line-top">Досье</div>
+
+          <div class="popup-bio">
+            <p id="popupBio">Заглушка текста...</p>
+          </div>
+          <div class="popup-meta"><strong>Статус:</strong> Личный состав</div>
         </div>
+      </div>
     </div>
 
-            <footer>
-            <div class="footer-full-content">
-                <div class="footer-grid">
-                    <div class="footer-col col-1">
-                        <div class="contact-item">
-                            <img src="img/Phone.png" alt="Phone">
-                            <span>+375 (0212) 69 21 52</span>
-                        </div>
-                        <div class="contact-item">
-                            <img src="img/instagram-new.png" alt="Inst">
-                            <span>school9_vitebsk</span>
-                        </div>
-                        <div class="contact-item">
-                            <img src="img/Gmail.png" alt="Mail">
-                            <span> school99by@yandex.by</span>
-                        </div>
-                    </div>
-                    <div class="footer-col col-2">
-                        <p>Витебская область, Железнодорожный район, г. Витебск, улица Школьная, 4</p>
-                        <p>ГУО «Средняя школа №9 г.Витебска имени М.Ф. Бирюлина»</p>
-                    </div>
-                    <div class="footer-col col-3">
-                        <ul class="footer-nav-vertical">
-                            <li><a href="index.html">Главная</a></li>
-                            <li><a href="Database.html">База Данных</a></li>
-                            <li><a href="about.html">О нас</a></li>
-                            <li><a href="contacts.html">Контакты</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="footer-line"></div>
-
-                <div class="footer-bottom">
-                    <p class="copyright" id="authorTrigger">&copy; 2026 Музей Партизанской Славы</p>
-                    <div class="footer-social-icons">
-                        <a href="#"><img src="img/Phone.png" alt="VK"></a>
-                        <a href="#"><img src="img/instagram-new.png" alt="TG"></a>
-                        <a href="#"><img src="img/Gmail.png" alt="YT"></a>
-                    </div>
-                </div>
+    <footer>
+      <div class="footer-full-content">
+        <div class="footer-grid">
+          <div class="footer-col col-1">
+            <div class="contact-item">
+              <img src="img/Phone.png" alt="Phone" />
+              <span>+375 (0212) 69 21 52</span>
             </div>
-        </footer>   
+            <div class="contact-item">
+              <img src="img/instagram-new.png" alt="Inst" />
+              <span>school9_vitebsk</span>
+            </div>
+            <div class="contact-item">
+              <img src="img/Gmail.png" alt="Mail" />
+              <span> school99by@yandex.by</span>
+            </div>
+          </div>
+          <div class="footer-col col-2">
+            <p>
+              Витебская область, Железнодорожный район, г. Витебск, улица
+              Школьная, 4
+            </p>
+            <p>ГУО «Средняя школа №9 г.Витебска имени М.Ф. Бирюлина»</p>
+          </div>
+          <div class="footer-col col-3">
+            <ul class="footer-nav-vertical">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="Database.html">База Данных</a></li>
+              <li><a href="about.html">О нас</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-line"></div>
+
+        <div class="footer-bottom">
+          <p class="copyright" id="authorTrigger">
+            &copy; 2026 Музей Партизанской Славы
+          </p>
+          <div class="footer-social-icons">
+            <a href="#"><img src="img/Phone.png" alt="VK" /></a>
+            <a href="#"><img src="img/instagram-new.png" alt="TG" /></a>
+            <a href="#"><img src="img/Gmail.png" alt="YT" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const searchInput = document.getElementById('dbSearch');
-    const searchBtn = document.getElementById('searchBtn');
-    const cards = document.querySelectorAll('.name-card');
-    const overlay = document.getElementById('heroOverlay');
-    const popup = document.querySelector('.hero-card-popup');
-    const authorTrigger = document.getElementById('authorTrigger');
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById("dbSearch");
+        const searchBtn = document.getElementById("searchBtn");
+        const cards = document.querySelectorAll(".name-card");
+        const overlay = document.getElementById("heroOverlay");
+        const popup = document.querySelector(".hero-card-popup");
+        const authorTrigger = document.getElementById("authorTrigger");
 
-    const heroesData = {
-        "Богданов Алексей Максимович": {
+        const heroesData = {
+          "Богданов Алексей Максимович": {
             bio: "В 1940 году Алексей Максимович Богданов был призван в ряды Красной армии. Его направили служить в 75-ю десантную бригаду. С началом Великой Отечественной войны, в 1941 году, он убыл на фронт.<br><br>После побега Алексей Максимович продолжил сражаться в рядах 35-й танковой дивизии. Освобождал Двинск, Краков, Кёнигсберг, а также штурмовал Берлин.",
             awards: "Медаль «За победу над Германией»",
             status: "Личный состав / 35-я танковая дивизия",
-            photo: "img/IMG_5738.JPG" 
-        },
-        "Вокаин Эдуард Владимирович": {
+            photo: "img/IMG_5738.JPG",
+          },
+          "Вокаин Эдуард Владимирович": {
             bio: "Эдуард Владимирович Вокаин родился 2 сентября 1923 года в семье рабочих. В 1942 году добровольцем ушел на фронт. Боевой путь начал на Первом Белорусском фронте.<br><br>За мужество и отвагу награжден шестью медалями.",
             awards: "«За отвагу», «За взятие Берлина»",
             status: "Личный состав / Первый Белорусский фронт",
-            photo: "img/IMG_5740.JPG"
-        },
-        "Трутнев Яков Васильевич": {
+            photo: "img/IMG_5740.JPG",
+          },
+          "Трутнев Яков Васильевич": {
             bio: "Воевал в составе 31-й армии. Освобождал города Ржев, Белый, Кёнигсберг. В Восточной Пруссии бойцы подобрали девочку-сироту, которую полк взял на воспитание. Свою войну закончил в 1945 году в Кёнигсберге.",
             awards: "Орден Славы",
             status: "Личный состав / 114-й и 45-й полки",
-            photo: "img/IMG_5742.JPG"
-        },
-        "2026 Музей Партизанской Славы": {
+            photo: "img/IMG_5742.JPG",
+          },
+          "2026 Музей Партизанской Славы": {
             bio: "Сайт разработан в рамках проекта по сохранению исторической памяти. Техническая реализация, дизайн и работа с архивами музея — Сухарев Алексей Александрович.(19.04.2026 доделан сайт до конца)",
             awards: "Разработка и дизайн",
             status: "Автор проекта",
-            photo: "img/IMG_0811.jpg" 
-        }
-    };
+            photo: "img/IMG_0811.jpg",
+          },
+        };
 
-    function performSearch() {
-        const filter = searchInput.value.toLowerCase().trim();
-        cards.forEach(card => {
+        function performSearch() {
+          const filter = searchInput.value.toLowerCase().trim();
+          cards.forEach((card) => {
             const name = card.textContent.toLowerCase();
             if (filter === "") {
-                card.classList.remove('found');
-                card.style.opacity = "1";
+              card.classList.remove("found");
+              card.style.opacity = "1";
             } else if (name.includes(filter)) {
-                card.classList.add('found');
-                card.style.opacity = "1";
+              card.classList.add("found");
+              card.style.opacity = "1";
             } else {
-                card.classList.remove('found');
-                card.style.opacity = "0.2";
+              card.classList.remove("found");
+              card.style.opacity = "0.2";
             }
-        });
-    }
+          });
+        }
 
-    if (searchInput) {
-        searchInput.addEventListener('input', performSearch);
-        searchInput.onkeydown = (e) => { if (e.key === 'Enter') performSearch(); };
-    }
-    if (searchBtn) searchBtn.onclick = performSearch;
+        if (searchInput) {
+          searchInput.addEventListener("input", performSearch);
+          searchInput.onkeydown = (e) => {
+            if (e.key === "Enter") performSearch();
+          };
+        }
+        if (searchBtn) searchBtn.onclick = performSearch;
 
-    function showPopup(name, rect = null) {
-        const data = heroesData[name] || {
+        function showPopup(name, rect = null) {
+          const data = heroesData[name] || {
             bio: "Сведения об этом участнике бригады в данный момент восстанавливаются.",
             awards: "Информация уточняется",
             status: "Личный состав",
-            photo: "https://dreamstime.com" 
-        };
+            photo: "https://dreamstime.com",
+          };
 
-        document.getElementById('popupName').innerText = name === "2026 Музей Партизанской Славы" ? "Разработчик сайта" : name;
-        document.getElementById('popupBio').innerHTML = data.bio;
-        
-        const popupImg = document.querySelector('.hero-card-popup .popup-image img');
+          document.getElementById("popupName").innerText =
+            name === "2026 Музей Партизанской Славы"
+              ? "Разработчик сайта"
+              : name;
+          document.getElementById("popupBio").innerHTML = data.bio;
 
-        if (popupImg) {
-            popupImg.src = data.photo; 
-            
-            popupImg.onerror = function() {
-                this.src = 'https://placeholder.com';
+          const popupImg = document.querySelector(
+            ".hero-card-popup .popup-image img"
+          );
+
+          if (popupImg) {
+            popupImg.src = data.photo;
+
+            popupImg.onerror = function () {
+              this.src = "https://placeholder.com";
             };
-        }
+          }
 
-        const metaBlock = document.querySelector('.popup-meta');
-        if (metaBlock) {
-            metaBlock.innerHTML = `<strong>${name.includes('2026') ? 'Роль' : 'Награды'}:</strong> ${data.awards}<br><strong>Статус:</strong> ${data.status}`;
-        }
+          const metaBlock = document.querySelector(".popup-meta");
+          if (metaBlock) {
+            metaBlock.innerHTML = `<strong>${
+              name.includes("2026") ? "Роль" : "Награды"
+            }:</strong> ${data.awards}<br><strong>Статус:</strong> ${
+              data.status
+            }`;
+          }
 
-        overlay.style.display = 'block';
-        overlay.style.height = document.documentElement.scrollHeight + "px";
+          overlay.style.display = "block";
+          overlay.style.height = document.documentElement.scrollHeight + "px";
 
-        if (rect) {
-            
+          if (rect) {
             let topPos = rect.top + window.pageYOffset - 100;
-            let leftPos = rect.left + window.pageXOffset - (875 / 2) + (rect.width / 2);
-            
+            let leftPos =
+              rect.left + window.pageXOffset - 875 / 2 + rect.width / 2;
+
             if (leftPos < 20) leftPos = 20;
-            if (leftPos + 875 > window.innerWidth) leftPos = window.innerWidth - 900;
+            if (leftPos + 875 > window.innerWidth)
+              leftPos = window.innerWidth - 900;
             if (topPos < 20) topPos = 20;
 
             popup.style.top = topPos + "px";
             popup.style.left = leftPos + "px";
-        } else {
-            
-            popup.style.top = (window.pageYOffset + window.innerHeight / 2 - 230) + "px";
-            popup.style.left = (window.innerWidth / 2 - 437) + "px";
+          } else {
+            popup.style.top =
+              window.pageYOffset + window.innerHeight / 2 - 230 + "px";
+            popup.style.left = window.innerWidth / 2 - 437 + "px";
+          }
         }
-    }
 
-    document.addEventListener("click", (e) => {
-        const nameCard = e.target.closest('.name-card');
-        const isAuthor = e.target.closest('#authorTrigger');
+        document.addEventListener("click", (e) => {
+          const nameCard = e.target.closest(".name-card");
+          const isAuthor = e.target.closest("#authorTrigger");
 
-        if (nameCard) {
-            const name = nameCard.querySelector('span').innerText.trim();
+          if (nameCard) {
+            const name = nameCard.querySelector("span").innerText.trim();
             showPopup(name, nameCard.getBoundingClientRect());
-        } 
-        else if (isAuthor) {
-            const authorText = isAuthor.innerText.replace('© ', '').trim();
+          } else if (isAuthor) {
+            const authorText = isAuthor.innerText.replace("© ", "").trim();
             showPopup(authorText);
-        }
-        else if (overlay && overlay.style.display === 'block' && !e.target.closest('.hero-card-popup')) {
-            overlay.style.display = 'none';
-        }
-    });
-});
+          } else if (
+            overlay &&
+            overlay.style.display === "block" &&
+            !e.target.closest(".hero-card-popup")
+          ) {
+            overlay.style.display = "none";
+          }
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
